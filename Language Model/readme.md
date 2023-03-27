@@ -31,5 +31,6 @@
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900187078-b695c552-72a2-4e12-8daa-d38a7fee1600.png#averageHue=%23f4f2f1&clientId=uc446a9bd-f212-4&from=paste&height=110&id=u95e4530f&name=image.png&originHeight=110&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5665&status=done&style=none&taskId=u4783bfdc-4138-45fc-ba52-89bd5a25d9d&title=&width=402)
 # 3.2评价指标
 困惑度（Perplexity）
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900381562-8808be47-d16b-433d-8b04-307646caf7af.png#averageHue=%23f6f5f4&clientId=u4aae8135-89e1-4&from=paste&height=90&id=u079ba86e&name=image.png&originHeight=90&originWidth=532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5056&status=done&style=none&taskId=u8086cd11-03bd-4fe4-95c3-57ef2a6e34f&title=&width=532)
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900396626-8f03e355-9f2f-4213-96e8-2e18e079e0a0.png#averageHue=%23f7f6f4&clientId=u4aae8135-89e1-4&from=paste&height=114&id=uee1f256a&name=image.png&originHeight=114&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5120&status=done&style=none&taskId=u99aa133f-b68d-42b3-be0b-9dc32825dbe&title=&width=402)
