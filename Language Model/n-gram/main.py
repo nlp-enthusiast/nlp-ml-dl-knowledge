@@ -18,45 +18,14 @@ if __name__ == '__main__':
     mix_tri_n = 0.00065
 
     # 输出频次
-    # write(训练数据, size, gram频次, 前文频次)
-    # write_count('pku/training_pku.txt', bigram_size, 'count/gram_pku_bi.txt', 'count/context_pku_bi.txt')
-    # write_count('pku/training_pku.txt', trigram_size, 'count/gram_pku_tri.txt', 'count/context_pku_tri.txt')
-    # write_count('msr/training_msr.txt', bigram_size, 'count/gram_msr_bi.txt', 'count/context_msr_bi.txt')
-    # write_count('msr/training_msr.txt', trigram_size, 'count/gram_msr_tri.txt', 'count/context_msr_tri.txt')
+    write(训练数据, size, gram频次, 前文频次)
+    write_count('pku/training_pku.txt', bigram_size, 'count/gram_pku_bi.txt', 'count/context_pku_bi.txt')
+    write_count('pku/training_pku.txt', trigram_size, 'count/gram_pku_tri.txt', 'count/context_pku_tri.txt')
+    write_count('msr/training_msr.txt', bigram_size, 'count/gram_msr_bi.txt', 'count/context_msr_bi.txt')
+    write_count('msr/training_msr.txt', trigram_size, 'count/gram_msr_tri.txt', 'count/context_msr_tri.txt')
 
-    write_count("msr/all.txt",trigram_size, 'count/gram_train_tri.txt', 'count/context_train_tri.txt')
-    pku_bi_model, pku_bi_ppl, pku_aver_bi = get_ppl(pku_bi_n, "msr/all.txt", 'msr/train.src', bigram_size)
-    # print(pku_aver_bi)
-    i=0
-    min5=[]
-    min8=[]
-    for idx,sc in enumerate(pku_bi_ppl):
-        if 5<=sc<8:
-            min8.append(idx)
-        if sc<5:
-            min5.append(idx)
-    with open("msr/train.src") as f1:
-        with open("msr/train.tgt") as f2:
-            with open("msr/train.ppl.src","w") as f3:
-                with open("msr/train.ppl.tgt","w") as f4:
-                    s=f1.readlines()
-                    t=f2.readlines()
-                    for i in range(len(s)):
-                        if i in min8:
-                            f3.write(s[i])
-                            f4.write(t[i])
-                        if i in min5:
-                            f3.write(s[i])
-                            f4.write(t[i])
-                            f3.write(s[i])
-                            f4.write(t[i])
-                            f3.write(s[i])
-                            f4.write(t[i])
-                        f3.write(s[i])
-                        f4.write(t[i])
-
-    # print(pku_bi_ppl,pku_aver_bi)
-    exit()
+    
+          
     # 输出四种模型及实验数据
     # pku 数据 bi模型
     pku_bi_model, pku_bi_ppl, pku_aver_bi = get_ppl(pku_bi_n, "pku/training_pku.txt", 'pku/test_pku.txt', bigram_size)
