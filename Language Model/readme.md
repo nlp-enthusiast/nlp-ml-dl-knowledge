@@ -24,13 +24,15 @@
 词wi仅与前序 n 个词相关
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679899724234-90ab39eb-859c-4d36-a5a0-c1226d690e07.png#averageHue=%23f7f6f5&clientId=ud25ddba6-7f4a-4&from=paste&height=90&id=ufd160f07&name=image.png&originHeight=90&originWidth=339&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2917&status=done&style=none&taskId=ua2a8f4ea-757f-455f-a81d-155d5efa3c8&title=&width=339)
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679899787577-6172f071-d767-4731-b60b-45cb1a553745.png#averageHue=%23ededed&clientId=ud25ddba6-7f4a-4&from=paste&height=191&id=u6c14a4e5&name=image.png&originHeight=191&originWidth=676&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21516&status=done&style=none&taskId=u88fa0421-845a-44d0-94ce-5fe8b47fe2a&title=&width=676)
+
 极大似然估计
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679899864798-a8a6b860-fe2e-4649-859e-f41b6e13a325.png#averageHue=%23f7f5f4&clientId=uc446a9bd-f212-4&from=paste&height=96&id=u69437315&name=image.png&originHeight=96&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5221&status=done&style=none&taskId=u00ab458c-efd9-43b9-827b-f61c59a5aad&title=&width=402)
 数据稀疏 (Sparse Data) /零计数（Zero Count）引起零概率问题，如何解决？
 数据平滑-加1平滑
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900187078-b695c552-72a2-4e12-8daa-d38a7fee1600.png#averageHue=%23f4f2f1&clientId=uc446a9bd-f212-4&from=paste&height=110&id=u95e4530f&name=image.png&originHeight=110&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5665&status=done&style=none&taskId=u4783bfdc-4138-45fc-ba52-89bd5a25d9d&title=&width=402)
 # 3.2评价指标
 困惑度（Perplexity）
-
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900381562-8808be47-d16b-433d-8b04-307646caf7af.png#averageHue=%23f6f5f4&clientId=u4aae8135-89e1-4&from=paste&height=90&id=u079ba86e&name=image.png&originHeight=90&originWidth=532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5056&status=done&style=none&taskId=u8086cd11-03bd-4fe4-95c3-57ef2a6e34f&title=&width=532)
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900396626-8f03e355-9f2f-4213-96e8-2e18e079e0a0.png#averageHue=%23f7f6f4&clientId=u4aae8135-89e1-4&from=paste&height=114&id=uee1f256a&name=image.png&originHeight=114&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5120&status=done&style=none&taskId=u99aa133f-b68d-42b3-be0b-9dc32825dbe&title=&width=402)
