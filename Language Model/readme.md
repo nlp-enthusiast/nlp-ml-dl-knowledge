@@ -28,8 +28,10 @@
 极大似然估计
 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679899864798-a8a6b860-fe2e-4649-859e-f41b6e13a325.png#averageHue=%23f7f5f4&clientId=uc446a9bd-f212-4&from=paste&height=96&id=u69437315&name=image.png&originHeight=96&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5221&status=done&style=none&taskId=u00ab458c-efd9-43b9-827b-f61c59a5aad&title=&width=402)
+
 数据稀疏 (Sparse Data) /零计数（Zero Count）引起零概率问题，如何解决？
 数据平滑-加1平滑
+
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/26311079/1679900187078-b695c552-72a2-4e12-8daa-d38a7fee1600.png#averageHue=%23f4f2f1&clientId=uc446a9bd-f212-4&from=paste&height=110&id=u95e4530f&name=image.png&originHeight=110&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5665&status=done&style=none&taskId=u4783bfdc-4138-45fc-ba52-89bd5a25d9d&title=&width=402)
 # 3.2评价指标
 困惑度（Perplexity）
