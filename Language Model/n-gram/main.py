@@ -19,21 +19,21 @@ if __name__ == '__main__':
 
     # 输出频次
     # write(训练数据, size, gram频次, 前文频次)
-    write_count('pku/valid-tr_pku.txt', bigram_size, 'count/gram_pku_bi.txt', 'count/context_pku_bi.txt')
-    write_count('pku/valid-tr_pku.txt', trigram_size, 'count/gram_pku_tri.txt', 'count/context_pku_tri.txt')
-    write_count('msr/valid-tr_msr.txt', bigram_size, 'count/gram_msr_bi.txt', 'count/context_msr_bi.txt')
-    write_count('msr/valid-tr_msr.txt', trigram_size, 'count/gram_msr_tri.txt', 'count/context_msr_tri.txt')
+    write_count('pku/training_pku.txt', bigram_size, 'count/gram_pku_bi.txt', 'count/context_pku_bi.txt')
+    write_count('pku/training_pku.txt', trigram_size, 'count/gram_pku_tri.txt', 'count/context_pku_tri.txt')
+    write_count('msr/training_msr.txt', bigram_size, 'count/gram_msr_bi.txt', 'count/context_msr_bi.txt')
+    write_count('msr/training_msr.txt', trigram_size, 'count/gram_msr_tri.txt', 'count/context_msr_tri.txt')
 
     # 输出四种模型及实验数据
     # pku 数据 bi模型
-    pku_bi_model, pku_bi_ppl, pku_aver_bi = get_ppl(pku_bi_n, "pku/valid-tr_pku.txt", 'pku/test_pku.txt', bigram_size)
+    pku_bi_model, pku_bi_ppl, pku_aver_bi = get_ppl(pku_bi_n, "pku/training_pku.txt", 'pku/test_pku.txt', bigram_size)
     write_model(pku_bi_model, 'model/pku_bi_model.txt')
     write_result(pku_bi_ppl, 'result/pku_bi_result.txt')
     print('pku_aver_bi', pku_aver_bi)  # 超参数:0.01055 平均困惑度:4132.187
     print('')
 
     # pku 数据 tri模型
-    pku_tri_model, pku_tri_ppl, pku_aver_tri = get_ppl(pku_tri_n, "pku/valid-tr_pku.txt", 'pku/test_pku.txt',
+    pku_tri_model, pku_tri_ppl, pku_aver_tri = get_ppl(pku_tri_n, "pku/training_pku.txt", 'pku/test_pku.txt',
                                                        trigram_size)
     write_model(pku_tri_model, 'model/pku_tri_model.txt')
     write_result(pku_tri_ppl, 'result/pku_tri_result.txt')
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     print('')
 
     # msr 数据 bi模型
-    msr_bi_model, msr_bi_result, msr_aver_bi = get_ppl(msr_bi_n, "msr/valid-tr_msr.txt", 'msr/test_msr.txt',
+    msr_bi_model, msr_bi_result, msr_aver_bi = get_ppl(msr_bi_n, "msr/training_msr.txt", 'msr/test_msr.txt',
                                                        bigram_size)
     write_model(msr_bi_model, 'model/msr_bi_model.txt')
     write_result(msr_bi_result, 'result/msr_bi_result.txt')
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     print('')
 
     # msr 数据 tri模型
-    msr_tri_model, msr_tri_result, msr_aver_tri = get_ppl(msr_tri_n, "msr/valid-tr_msr.txt", 'msr/test_msr.txt',
+    msr_tri_model, msr_tri_result, msr_aver_tri = get_ppl(msr_tri_n, "msr/training_msr.txt", 'msr/test_msr.txt',
                                                           trigram_size)
     write_model(msr_tri_model, 'model/msr_tri_model.txt')
     write_result(msr_tri_result, 'result/msr_tri_result.txt')
@@ -58,14 +58,14 @@ if __name__ == '__main__':
 
     # 互换测试数据 输出结果
     # pku 建模 msr 测试 bi模型
-    pku_bi_msr_model, pku_bi_msr_result, pku_bi_msr_aver = get_ppl(pku_bi_n, "pku/valid-tr_pku.txt", 'msr/test_msr.txt',
+    pku_bi_msr_model, pku_bi_msr_result, pku_bi_msr_aver = get_ppl(pku_bi_n, "pku/training_pku.txt", 'msr/test_msr.txt',
                                                                    bigram_size)
     write_result(pku_bi_msr_result, 'result/pku_bi_msr_result.txt')
     print('pku_bi_msr_aver', pku_bi_msr_aver)  # 平均困惑度:3048.676
     print('')
 
     # pku 建模 msr 测试 tri模型
-    pku_tri_msr_model, pku_tri_msr_result, pku_tri_msr_aver = get_ppl(pku_tri_n, "pku/valid-tr_pku.txt",
+    pku_tri_msr_model, pku_tri_msr_result, pku_tri_msr_aver = get_ppl(pku_tri_n, "pku/training_pku.txt",
                                                                       'msr/test_msr.txt',
                                                                       trigram_size)
     write_result(pku_tri_msr_result, 'result/pku_tri_msr_result.txt')
@@ -73,14 +73,14 @@ if __name__ == '__main__':
     print('')
 
     # msr 建模 pku 测试 bi模型
-    msr_bi_pku_model, msr_bi_pku_result, msr_bi_pku_aver = get_ppl(msr_bi_n, "msr/valid-tr_msr.txt", 'pku/test_pku.txt',
+    msr_bi_pku_model, msr_bi_pku_result, msr_bi_pku_aver = get_ppl(msr_bi_n, "msr/training_msr.txt", 'pku/test_pku.txt',
                                                                    bigram_size)
     write_result(msr_bi_pku_result, 'result/msr_bi_pku_result.txt')
     print('msr_bi_pku_aver', msr_bi_pku_aver)  # 平均困惑度:7632.463
     print('')
 
     # msr 建模 pku 测试 tri模型
-    msr_tri_pku_model, msr_tri_pku_result, msr_tri_pku_aver = get_ppl(msr_tri_n, "msr/valid-tr_msr.txt",
+    msr_tri_pku_model, msr_tri_pku_result, msr_tri_pku_aver = get_ppl(msr_tri_n, "msr/training_msr.txt",
                                                                       'pku/test_pku.txt',
                                                                       trigram_size)
     write_result(msr_tri_pku_result, 'result/msr_tri_pku_result.txt')
@@ -89,8 +89,8 @@ if __name__ == '__main__':
 
     # 混合数据训练 两种语言模型 两个测试数据
     # bi 模型 pku 测试
-    mix_bi_model, mix_bi_pku_result, mix_bi_pku_aver = get_mix_ppl(mix_bi_n, "msr/valid-tr_msr.txt",
-                                                                   "pku/valid-tr_pku.txt",
+    mix_bi_model, mix_bi_pku_result, mix_bi_pku_aver = get_mix_ppl(mix_bi_n, "msr/training_msr.txt",
+                                                                   "pku/training_pku.txt",
                                                                    "pku/test_pku.txt",
                                                                    bigram_size)
     write_model(mix_bi_model, 'model/mix_bi_model.txt')
@@ -99,8 +99,8 @@ if __name__ == '__main__':
     print('')
 
     # bi 模型 msr 测试
-    mix_bi_model, mix_bi_msr_result, mix_bi_msr_aver = get_mix_ppl(mix_bi_n, "msr/valid-tr_msr.txt",
-                                                                   "pku/valid-tr_pku.txt",
+    mix_bi_model, mix_bi_msr_result, mix_bi_msr_aver = get_mix_ppl(mix_bi_n, "msr/training_msr.txt",
+                                                                   "pku/training_pku.txt",
                                                                    "msr/test_msr.txt",
                                                                    bigram_size)
     write_result(mix_bi_msr_result, 'result/mix_bi_msr_result.txt')
@@ -108,8 +108,8 @@ if __name__ == '__main__':
     print('')
 
     # tri 模型 pku 测试
-    mix_tri_model, mix_tri_pku_result, mix_tri_pku_aver = get_mix_ppl(mix_tri_n, "msr/valid-tr_msr.txt",
-                                                                      "pku/valid-tr_pku.txt",
+    mix_tri_model, mix_tri_pku_result, mix_tri_pku_aver = get_mix_ppl(mix_tri_n, "msr/training_msr.txt",
+                                                                      "pku/training_pku.txt",
                                                                       "pku/test_pku.txt",
                                                                       trigram_size)
     write_model(mix_tri_model, 'model/mix_tri_model.txt')
@@ -118,8 +118,8 @@ if __name__ == '__main__':
     print('')
 
     # tri 模型 msr 测试
-    mix_tri_model, mix_tri_msr_result, mix_tri_msr_aver = get_mix_ppl(mix_tri_n, "msr/valid-tr_msr.txt",
-                                                                      "pku/valid-tr_pku.txt",
+    mix_tri_model, mix_tri_msr_result, mix_tri_msr_aver = get_mix_ppl(mix_tri_n, "msr/training_msr.txt",
+                                                                      "pku/training_pku.txt",
                                                                       "msr/test_msr.txt",
                                                                       trigram_size)
     write_result(mix_tri_msr_result, 'result/mix_tri_msr_result.txt')
