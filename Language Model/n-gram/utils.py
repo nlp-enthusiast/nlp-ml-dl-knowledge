@@ -170,13 +170,13 @@ def write_count(train_txt, context_size, gram_count, context_count):
     vocab_training, corpus_training = load_data(train_txt)
     # 将数据传入模型
     dataset = Ngram(corpus_training, context_size)
-    with open(gram_count, 'w') as f1:
+    with open(gram_count, 'w',encoding="utf-8") as f1:
         key, value = list(dataset.dict_gram.keys()), list(dataset.dict_gram.values())
         for i in range(len(key)):
             f1.write(str(key[i]) + '的频次-----' + str(value[i]) + '\n')
         f1.close()
 
-    with open(context_count, 'w') as f2:
+    with open(context_count, 'w',encoding="utf-8") as f2:
         key, value = list(dataset.dict_context.keys()), list(dataset.dict_context.values())
         for i in range(len(key)):
             f2.write(str(key[i]) + '的频次-----' + str(value[i]) + '\n')
